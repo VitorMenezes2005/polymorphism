@@ -32,4 +32,13 @@ public class NationalCars extends Cars {
     public String priceTag(){
         return getName() + ", R$" + calculation();
     }
+
+    @Override
+    public String toString() {
+        return getName()
+                + " "
+                + getYear()
+                + ", R$"
+                + calculation();
+    }
 }

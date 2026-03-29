@@ -24,12 +24,22 @@ public class ForeignCars extends Cars{
     }
 
     public Double calculation(){
-        Double valueFinal = getPrice() + importTax;
+        Double x = getPrice() * (importTax / 100);
+        Double valueFinal = getPrice() + x;
         return valueFinal;
     }
 
     @Override
     public String priceTag(){
         return getName() + ", R$" + calculation();
+    }
+
+    @Override
+    public String toString() {
+        return getName()
+                + " "
+                + getYear()
+                + ", R$"
+                + calculation();
     }
 }
